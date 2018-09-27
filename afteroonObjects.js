@@ -25,3 +25,23 @@ const hobbitFeed = ({
 })
 
 console.log(hobbitFeed.meals[3]);
+
+function objectCreator(employeeName, employeeJobTitle){
+    const myObj = ({
+        name: employeeName,
+        jobTitle: employeeJobTitle
+    })
+    return myObj;
+}
+
+const obj1 = new objectCreator('john', 'janitor');
+const obj2 = new objectCreator('jacob', 'musician');
+const obj3 = new objectCreator('jingleheimer', 'gastro king');
+const obj4 = new objectCreator('schmidt', 'junk bond salesman');
+const obj5 = new objectCreator('myname', 'my name too');
+
+const employees = [obj1, obj2, obj3, obj4, obj5];
+console.log(employees);
+for(key in employees){
+    console.log(`${employees[key].name} is a ${employees[key].jobTitle}`);
+}
